@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Latihann Kalkulator</title>
+</head>
+<body>
+
+    <script>
+        let angka1 = parseFloat(prompt("Masukkan angka pertama:"));
+        let angka2 = parseFloat(prompt("Masukkan angka kedua:"));
+        let operator = prompt("Masukkan operator (+, -, *, /):");
+
+        let hasil;
+
+        switch (operator) {
+            case "+":
+                hasil = angka1 + angka2;
+                break;
+
+            case "-":
+                hasil = angka1 - angka2;
+                break;
+
+            case "*":
+                hasil = angka1 * angka2;
+                break;
+
+            case "/":
+                if (angka2 !== 0) {
+                    hasil = angka1 / angka2;
+                } else {
+                    alert("Error: Tidak bisa membagi dengan nol!");
+                }
+                break;
+
+            default:
+                alert("Operator tidak valid!");
+        }
+
+        if (hasil !== undefined && ["+", "-", "*", "/"].includes(operator)) {
+            alert("Hasil: " + angka1 + " " + operator + " " + angka2 + " = " + hasil);
+        }
+    </script>
+
+</body>
+</html>
